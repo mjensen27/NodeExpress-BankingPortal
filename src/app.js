@@ -52,4 +52,9 @@ app.post("/transfer", (req, res) => {
   res.render("transfer", { message: "Transfer Completed" });
 });
 
+app.get("/payment", (req, res) => {
+  res.render("payment", { account: accounts.credit });
+});
+app.post("payment");
+
 app.listen(3000, () => console.log("PS Project Running on port 3000!"));
